@@ -147,22 +147,24 @@ table {
 @primary-font: 'Raleway', sans-serif;
 
 .shadow() {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .shadow_light() {
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
-.blue_gradient() {
+.primary_gradient() {
     background: #f46b45;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #eea849, #f46b45);
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #eea849, #f46b45);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
 }
+
+@primary: black;
+@secondary: rgb(78, 78, 78);
 
 html {
     font-size: 62.5%;
@@ -172,13 +174,15 @@ html {
 body {
     font-family: @primary-font;
     display: flex;
-    justify-content: center;
-    align-items: center;
+	align-items: center;
+	justify-content: space-between;
+	height: 100vh;
+	flex-direction: column;
     font-size: 2rem;
 
     .container {
-        padding: 0 4%;
-        max-width: 1100px;
+        padding: 0 2vw;
+		width: 1100px;
     }
 
     a {
@@ -196,6 +200,20 @@ body {
 
     h1 {
         font-size: 5rem;
+	}
+	
+	h2 {
+		font-size: 2.5rem;
+	}
+    button {
+		border: none;
+		border-radius: 7px;
+        padding: 0.8rem 2.5rem;
+        text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		cursor: pointer;
+		font-size: 1.7rem;
     }
 }
 
@@ -219,11 +237,16 @@ nav {
     }
 }
 
-section.top {
-    padding: 50px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+section {
+	margin: 50px 0;
+}
+
+.top {
+	justify-content: space-between;
+	display: flex;
+	align-items: center;
+
+	margin-top: 3vh;
 
     .intro-text {
         width: 60%;
@@ -231,13 +254,18 @@ section.top {
         h1 {
             margin-bottom: 10px;
         }
+
+        p {
+            color: @secondary;
+        }
     }
 
     .profile-card {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
+        justify-content: space-between;
+		align-items: center;
+		height: 390px;
 
         width: 320px;
         padding: 30px 30px;
@@ -245,26 +273,42 @@ section.top {
         text-align: center;
         color: white;
 
-        border-radius: 4%;
+        border-radius: 10px;
 
         .shadow();
-        .blue_gradient();
+        .primary_gradient();
 
         img {
             .shadow();
+            border: 1px rgba(255, 255, 255, 0.205) solid;
             display: block;
             width: 45%;
             border-radius: 50%;
-        }
-
-        img,
-        h4,
-        p {
-            margin: 0 0 15px;
-        }
+		}
+		
+		h4 {
+			margin: -2% 0;
+		}
 
         p {
             font-size: 1.7rem;
-        }
+		}
+		
+		button {
+			background: rgba(255, 255, 255, 0.253);
+			border: 2px white solid;
+			color: white;
+		}
     }
+}
+
+footer {
+	padding: 30px 0;
+	.primary_gradient();
+	color: white;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	white-space: pre;
 }
