@@ -196,7 +196,7 @@ nav .links {
   justify-content: space-between;
 }
 section.top {
-  padding: 200px 0;
+  padding: 50px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -216,10 +216,17 @@ section.top .profile-card {
   padding: 30px 30px;
   text-align: center;
   color: white;
-  background: linear-gradient(to right, #b993d6, #8ca6db);
   border-radius: 4%;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  background: #f46b45;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #eea849, #f46b45);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #eea849, #f46b45);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 section.top .profile-card img {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   display: block;
   width: 45%;
   border-radius: 50%;
@@ -228,4 +235,7 @@ section.top .profile-card img,
 section.top .profile-card h4,
 section.top .profile-card p {
   margin: 0 0 15px;
+}
+section.top .profile-card p {
+  font-size: 1.7rem;
 }
