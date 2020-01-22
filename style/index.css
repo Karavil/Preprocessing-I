@@ -199,20 +199,33 @@ section.top {
   padding: 200px 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 section.top .intro-text {
-  width: 50%;
+  width: 60%;
+}
+section.top .intro-text h1 {
+  margin-bottom: 10px;
 }
 section.top .profile-card {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  width: 350px;
-  height: 350px;
+  width: 320px;
+  padding: 30px 30px;
+  text-align: center;
+  color: white;
+  background: linear-gradient(to right, #b993d6, #8ca6db);
+  border-radius: 4%;
 }
 section.top .profile-card img {
   display: block;
   width: 45%;
   border-radius: 50%;
+}
+section.top .profile-card img,
+section.top .profile-card h4,
+section.top .profile-card p {
+  margin: 0 0 15px;
 }
