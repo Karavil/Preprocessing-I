@@ -200,11 +200,18 @@ body button {
   cursor: pointer;
   font-size: 1.7rem;
 }
+body section {
+  margin: 50px 0;
+}
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 40px 0;
+}
+nav a {
+  text-decoration: none;
+  color: black;
 }
 nav .logo {
   width: 140px;
@@ -215,9 +222,6 @@ nav .links {
   width: 400px;
   display: flex;
   justify-content: space-between;
-}
-section {
-  margin: 50px 0;
 }
 .banner {
   justify-content: space-between;
