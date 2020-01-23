@@ -292,7 +292,9 @@ nav .links {
   margin: 20px 0;
 }
 footer {
-  padding: 30px 0;
+  z-index: 2;
+  box-shadow: 0 -5px 10px -5px rgba(0, 0, 0, 0.247);
+  padding: 20px 0;
   background: #f46b45;
   /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #eea849, #f46b45);
