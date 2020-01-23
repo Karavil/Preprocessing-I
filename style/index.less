@@ -138,7 +138,6 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
     box-sizing: border-box;
-    max-width: 100%;
 }
 
 // Start of personal styling
@@ -148,6 +147,10 @@ table {
 
 .shadow() {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.shadow_heavy() {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.09);
 }
 
 .shadow_light() {
@@ -167,7 +170,7 @@ table {
 }
 
 @primary: black;
-@secondary: rgb(78, 78, 78);
+@secondary: rgb(39, 39, 39);
 
 html {
     font-size: 62.5%;
@@ -184,9 +187,9 @@ body {
     font-size: 2rem;
 
     .container {
-        padding: 0 3vw;
-		width: 1100px;
-		// .shadow();
+        width: 900px;
+        padding: 0 40px;
+        // .shadow();
     }
 
     a {
@@ -196,6 +199,11 @@ body {
     p {
         letter-spacing: 0.05rem;
         line-height: 1.4;
+        color: @secondary;
+    }
+
+    li {
+        color: @secondary;
     }
 
     b {
@@ -219,8 +227,8 @@ body {
         background: black;
         color: white;
         border: none;
-        border-radius: 7px;
-        padding: 0.8rem 2.5rem;
+        border-radius: 1rem;
+        padding: 1rem 2.5rem;
         text-align: center;
         text-decoration: none;
         display: inline-block;
@@ -261,26 +269,46 @@ nav {
 
 
 .banner {
-    justify-content: space-between;
-    display: flex;
-    align-items: center;
 
-    margin-top: 3vh;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+    margin: 0;
+    width: 100%;
+
+    -webkit-box-shadow: 0px 0px 49px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 49px -8px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 49px -8px rgba(0, 0, 0, 0.30);
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
     .intro-text {
-        width: 62%;
+        width: 450px;
 
         h1 {
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
 
         p {
-            color: @secondary;
+            margin-bottom: 15px;
 
-            b {
+            b.language {
                 color: @primary_gradient_2;
             }
+
+            b {
+                color: @primary;
+            }
+
+            .emoji {
+                font-size: 2.3rem;
+            }
         }
+
     }
 
     .profile-card {
@@ -288,10 +316,10 @@ nav {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        height: 390px;
+        height: 385px;
 
-        width: 320px;
-        padding: 30px 30px;
+        width: 290px;
+        padding: 30px 10px;
 
         text-align: center;
         color: white;
@@ -305,29 +333,41 @@ nav {
             .shadow();
             border: 1px rgba(255, 255, 255, 0.205) solid;
             display: block;
-            width: 45%;
+            width: 55%;
             border-radius: 50%;
-        }
-
-        h3 {
-            margin: -2% 0 -4%;
         }
 
         p {
             font-size: 1.7rem;
+            color: white;
         }
 
-        button {
-            background: rgba(255, 255, 255, 0.253);
-            border: 2px white solid;
-            color: white;
-            outline: none;
-            transition: 0.3s;
+        a {
+            text-decoration: none;
+        }
 
-            &:hover {
-                .shadow_light();
-                transition: 1s;
-                background: rgba(0, 0, 0, 0.329);
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 150px;
+            width: 75%;
+
+
+            button {
+                width: 100%;
+                color: white;
+                outline: none;
+                white-space: pre;
+                transition: 0.2s;
+
+                background: rgba(0, 0, 0, 0.616);
+                .shadow();
+
+                &:hover {
+                    background: rgba(0, 0, 0, 0.781);
+                    transition: 0.2s;
+                }
             }
         }
     }
@@ -343,17 +383,17 @@ nav {
 }
 
 footer {
-	z-index: 2;
-	box-shadow: 0 -5px 10px -5px rgba(0, 0, 0, 0.247);
-	
-	padding: 20px 0;
+    z-index: 2;
+    box-shadow: 0 -5px 10px -5px rgba(0, 0, 0, 0.247);
+
+    padding: 20px 0;
     .primary_gradient();
-	color: white;
-	
+    color: white;
+
     width: 100%;
     display: flex;
     justify-content: center;
-	align-items: center;
-	
+    align-items: center;
+
     white-space: pre;
 }
