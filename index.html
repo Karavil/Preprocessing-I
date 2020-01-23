@@ -1,19 +1,105 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
 
-  <title>My Resume</title>
+  <title>Alex's Resume</title>
 
-  <link rel="stylesheet" href="css/index.css">
-
+  <link rel="stylesheet" href="style/index.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/bb0281f03b.js" crossorigin="anonymous"></script>
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
 </head>
 
 <body>
-  <h1>My Resume</h1>
+  <div class="container">
+    <header>
+      <nav>
+        <div class="logo">
+          <i class="fas fa-rocket"></i>
+          <a><b>Alex Karavil</b></a>
+        </div>
+        <div class="links">
+          <a href="">Home</a>
+          <a href="#about">About</a>
+          <a href="https://karavil.io/portfolio">Portfolio</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+  </div>
+  <section class="banner" id="#about">
+
+    <div class="container">
+      <div class="intro-text">
+        <h1><b>Hi, I'm Alex</b></h1>
+
+        <p>I am a <b>software developer</b> who loves creating elegant and modern solutions for complex problems.</p>
+
+        <p>I currently live in <b>Philadelphia</b>, but I move around a lot. <i class="fas fa-globe-americas"></i></p>
+      </div>
+
+      <div class="profile-card">
+        <img src="images/profile.jpg" alt="A portrait picture of me (Alex Karavil). Male with black hair.">
+
+        <div class="buttons">
+          <a href="/files/alex-karavil-resume.pdf"><button>GitHub <i class="fab fa-github"></i></button></a>
+          <a href="/files/alex-karavil-resume.pdf"><button>Twitter <i class="fab fa-twitter"></i></button> </a>
+          <a href="/files/alex-karavil-resume.pdf" download><button>Resume <i class="fas fa-file-pdf"></i></button></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <section class="skills">
+      <h2><b>My (programming) Skills</b></h2>
+
+      <p>I have a bunch of <b>projects</b>, and most of my them are made with <b class="language">React</b>, <b
+          class="language">NodeJS</b> and <b class="language">Python</b>. I also used to dabble in <b
+          class="language">Java</b> in the past!</p>
+
+      <ul>
+        <li>Python</li>
+        <li>JavaScript</li>
+        <li>HTML5</li>
+        <li>Less/CSS</li>
+        <li>GitHub</li>
+        <li>NodeJS</li>
+        <li>React</li>
+      </ul>
+    </section>
+
+    <section class="history">
+      <div class="work-history-list">
+        <h2><b>Where did I work?</b></h2>
+        <ul>
+          <li>2019 - Current: Apex Gaming PCs</li>
+          <li>2016 - 2017: HS Star League</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2><b>Get in touch!</b></h2>
+      <p>I'm always looking to connect with others. If you are interested in working together, or just want to say hi,
+        feel free to add me on social media! (Or send an email)</p>
+      <ul>
+        <button>Twitter</button>
+        <button>GitHub</button>
+        <button>Email</button>
+      </ul>
+    </section>
+
+  </div>
+  <footer>
+    <i class="far fa-copyright"></i>
+    <span> Created by Alex Karavil</span>
+  </footer>
 </body>
+
 </html>
